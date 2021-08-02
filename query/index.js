@@ -52,7 +52,7 @@ app.listen(4002,async ()=>{
     try {
         const res = await axios.get('http://localhost:4005/events');
         for(let events of res.data){
-            console.log("Event Is processing", events);
+            console.log("Event Is processing-->", events);
             handelEvents(events.type, events.data);
         }
     } catch (error) {
